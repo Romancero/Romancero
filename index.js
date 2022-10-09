@@ -1,3 +1,5 @@
+// - Write -
+
 const phraseContent = document.getElementById('phrase');
 
 const phrases = [
@@ -59,8 +61,6 @@ function toWrite() {
   currentState ? setTimeout(toWrite, 140) : setTimeout(toWrite, 40);
 }
 
-toWrite();
-
 // - Sound -
 
 let sound = new Audio('./erestu.mp3')
@@ -70,4 +70,14 @@ sound.loop = true;
 
 function play() {
   sound.paused ? sound.play() : sound.pause();
+}
+
+// - Start -
+
+const startButton = document.getElementById('start');
+
+function start() {
+  play();
+  setTimeout(toWrite, 900);
+  startButton.style.display = 'none';
 }
