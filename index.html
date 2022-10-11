@@ -25,6 +25,12 @@
 
   <div class="App">
 
+    <div id="nosotros" class="nosotros nosotros--ocultar">
+      <img src="./nosotros.png" alt="nosotros">
+      <p>I Love You ❤️</p>
+    </div>
+    <p class="mostrar-nosotros" id="mostrarNosotros" onclick={show()}>➕</p>
+
     <div class="mensaje">
       <input type="text" name="mensaje" placeholder="Escribir..." onchange={capturarMensaje(event)}>
       <a href="https://google.com" id="env">Enviar</a>
@@ -40,6 +46,16 @@
   <script>
     let env = document.getElementById("env");
     env.setAttribute("href", url);
+
+    //-------------
+
+    let nosotros = document.getElementById("nosotros");
+    let mostrarNosotros = document.getElementById("mostrarNosotros");
+
+    function show() {
+      nosotros.classList.toggle("nosotros--ocultar");
+      mostrarNosotros.classList.toggle("mostrarNosotros--rotar");
+    }
   </script>
 
   <script src="index.js"></script>
