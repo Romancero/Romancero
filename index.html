@@ -9,14 +9,38 @@
   <title>Romancero</title>
 </head>
 <body>
+  
+  <script>
+    const phone = 5491130774138;
+    let mensaje = "Te amo Román";
+    let url = `https://api.whatsapp.com/send?phone=${phone}&text=${mensaje}`;
+
+    function capturarMensaje(event) {
+      mensaje = event.target.value;
+      url = `https://api.whatsapp.com/send?phone=${phone}&text=${mensaje}`;
+      env.setAttribute("href", url);
+      console.log(mensaje);
+    }
+  </script>
+
   <div class="App">
 
+    <div class="mensaje">
+      <input type="text" name="mensaje" placeholder="Escribir..." onchange={capturarMensaje(event)}>
+      <a href="https://google.com" id="env">Enviar</a>
+    </div>
+    
     <p id="phrase"></p>
     <button id="start" onclick={start()}>Start</button>
     <p class="love">❤️</p>
     <button id="playBtn" onclick={play()}>🎶</button>
     
   </div>
+
+  <script>
+    let env = document.getElementById("env");
+    env.setAttribute("href", url);
+  </script>
 
   <script src="index.js"></script>
 </body>
