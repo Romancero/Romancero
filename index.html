@@ -10,7 +10,7 @@
 </head>
 <body>
   
-  <script>
+  <!-- <script>
     const phone = 5491130774138;
     let mensaje = "Te amo Román";
     let url = `https://api.whatsapp.com/send?phone=${phone}&text=${mensaje}`;
@@ -47,8 +47,6 @@
     let env = document.getElementById("env");
     env.setAttribute("href", url);
 
-    //-------------
-
     let nosotros = document.getElementById("nosotros");
     let mostrarNosotros = document.getElementById("mostrarNosotros");
 
@@ -56,7 +54,12 @@
       nosotros.classList.toggle("nosotros--ocultar");
       mostrarNosotros.classList.toggle("mostrarNosotros--rotar");
     }
-  </script>
+  </script> -->
+
+  <div class="display-keyboardevent">
+    <label for="display-keyevent" class="display-keyboardevent_label">Tecla o Teclas presionadas:</label>
+    <input id="display-keyevent" class="display-keyboardevent_input" value="" type="text" readonly >
+  </div>
 
   <script src="index.js"></script>
 </body>
